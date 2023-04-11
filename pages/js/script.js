@@ -1,3 +1,6 @@
-import { burgerFunctionality } from "./modules/burger.js";
+/* import { burgerToggle } from "./modules/burger.js";
+import { burgerClose } from "./modules/burger.js";
 
-burgerFunctionality();
+burgerToggle();
+burgerClose(); */
+
