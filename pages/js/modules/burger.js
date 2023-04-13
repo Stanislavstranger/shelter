@@ -31,5 +31,5 @@ const burgerClose = () => {
     }
 }
 
-burgerToggle();
-burgerClose();
+export { burgerToggle };
+export { burgerClose };

@@ -8,7 +8,7 @@ fetch("../../../assets/json/pets.json") //path to the file with json data
     })
     .then(data => {
         pets = data;
-        console.log(pets);
+        /* console.log(pets); */
     });
 
 /* Slider */
@@ -18,13 +18,13 @@ fetch("../../../assets/json/pets.json") //path to the file with json data
     let buttonSlider = document.querySelectorAll('.button-slider');
     let prevCards = [];
 
-/* Create slider card */
+    /* Create slider card */
 
     function createCard() {
         setTimeout(function () {
             let sliderArray = createUniqueArray(3);
             for (i = 0; i < cards.length; i++) {
-                cards[i].innerHTML = `<img src="${pets[sliderArray[i]].img}" alt=${pets[sliderArray[i]].name}>
+                cards[i].innerHTML = `<img src="${pets[sliderArray[i]].img}" alt=${pets[sliderArray[i]].name} class="popup-link">
             <h3>${pets[sliderArray[i]].name}</h3>
             <button class="button border">Learn more</button>`;
                 cards[i].id = sliderArray[i];
@@ -35,7 +35,7 @@ fetch("../../../assets/json/pets.json") //path to the file with json data
 
     createCard();
 
-/* Create unique array slider card */
+    /* Create unique array slider card */
 
     function createUniqueArray(count) {
         let array = [];
@@ -49,7 +49,7 @@ fetch("../../../assets/json/pets.json") //path to the file with json data
         return array;
     }
 
-/* Slide movement */
+    /* Slide movement */
 
     function slider() {
         for (i = 0; i < buttonSlider.length; i++) {
