@@ -30,7 +30,7 @@ fetch("../../../assets/json/pets.json") //path to the file with json data
                 cards[i].id = sliderArray[i];
             }
             ;
-        }, 200);
+        }, 300);
     }
 
     createCard();
@@ -48,6 +48,14 @@ fetch("../../../assets/json/pets.json") //path to the file with json data
         prevCards = array.slice();
         return array;
     }
+
+  /* Navigation with ArrowRight and ArrowLeft */
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        createCard()
+    }
+});
 
     /* Slide movement */
 

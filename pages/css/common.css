@@ -726,6 +726,7 @@ body._lock {
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.3s ease 0s;
+    z-index: 5;
 }
 
 .popup.open {
@@ -816,6 +817,11 @@ body._lock {
 
 .popup__content:hover {
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.popup__container:not(:hover) .button-round {
+    background: #FDDCC4;
+    border: none;
 }
 
 .popup__image {

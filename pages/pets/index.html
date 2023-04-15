@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="lock-padding">
     <div class="wrapper">
         <header class="header">
             <div class="header__container _container">
@@ -29,7 +29,7 @@
                 <nav class="header__menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="../main/index.html" class="menu__link menu__link_active">About the shelter</a>
+                            <a href="../main/index.html" class="menu__link menu__link">About the shelter</a>
                         </li>
                         <li class="menu__item">
                             <a href="#" class="menu__link menu__link_active">Our pets</a>
@@ -55,22 +55,22 @@
                     <div class="cards__container">
 
                     </div>
-                    <div class="navigation">
-                        <button class="button-round button-round-inactive pagination" id="go-first-page">
+                    <div class="navigation-button">
+                        <button class="button-round _inactive pagination" id="first-page">
                             <h4>
                                 << </h4>
                         </button>
-                        <button class="button-round button-round-inactive pagination" id="go-previous">
+                        <button class="button-round _inactive pagination" id="previous">
                             <h4>
                                 < </h4>
                         </button>
-                        <button class="button-round button-round-active pagination" id="actual-page">
+                        <button class="button-round _active pagination" id="actual-page">
                             <h4>1</h4>
                         </button>
-                        <button class="button-round pagination" id="go-next">
+                        <button class="button-round pagination" id="next">
                             <h4>></h4>
                         </button>
-                        <button class="button-round pagination" id="go-last-page">
+                        <button class="button-round pagination" id="last-page">
                             <h4>>></h4>
                         </button>
                     </div>
@@ -106,8 +106,22 @@
             </div>
         </footer>
 
+        <div id="popup" class="popup">
+            <div class="popup__body">
+                <div class="popup__container">
+                    <button class="button-round close-popup"><img
+                        src="../../assets/icons/close.svg" alt="close"></button>
+                    <div class="popup__content">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="../js/script.js" type="module"></script>
+    <script src="../js/modules/slider.js"></script>
+    <script src="../js/modules/pagination.js"></script>
+    <script src="../js/modules/popup.js"></script>
 </body>
 
 </html>
