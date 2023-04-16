@@ -153,13 +153,13 @@ function createPopup(elem) {
                 <h5>Age:</h5> ${pets[elem].age}
             </li>
             <li class="popup__item">
-                <h5>Inoculations:</h5>${pets[elem].inoculations}
+                <h5>Inoculations:</h5> ${pets[elem].inoculations}
             </li>
             <li class="popup__item">
-                <h5>Diseases:</h5>${pets[elem].diseases}
+                <h5>Diseases:</h5> ${pets[elem].diseases}
             </li>
             <li class="popup__item">
-                <h5>Parasites:</h5>${pets[elem].parasites}
+                <h5>Parasites:</h5> ${pets[elem].parasites}
             </li>
         </ul>
     </div>`;

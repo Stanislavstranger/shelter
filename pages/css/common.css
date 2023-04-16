@@ -385,7 +385,7 @@ body._lock {
         z-index: 5;
         display: block;
         position: absolute;
-        top: 19px;
+        top: 30px;
         right: 53px;
         align-content: center;
         width: 30px;
@@ -427,26 +427,41 @@ body._lock {
         top: 49px;
         right: 65px;
         transform: rotate(90deg) translate(0px, -50%);
+        transition: transform 1.2s ease 0s;
+    }
+
+    .burger__button {
+        transform: rotate(0deg) translate(0px, -50%);
+        transition: transform 1.2s ease 0s;
+    }
+
+    .blackout._active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(41, 41, 41, 0.6);
+        z-index: 4;
     }
 
     .header._active {
         position: fixed;
         top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(41, 41, 41, 0.6);
+        left: 100%;
+        width: 320px;
+        height: 100vh;
+        padding-left: 0;
+        padding-right: 0;
+        transform: translate(-100%, 0);
+        transition: transform 0.8s ease 0s;
+        background: #292929;
+        z-index: 5;
     }
 
     .header__container._active {
-        position: fixed;
-        top: 0;
-        right: 320px;
-        width: 320px;
         padding-left: 0;
         padding-right: 0;
-        transform: translate(100%, 0);
-        background: #292929;
     }
 
     .logo._active {
@@ -461,27 +476,25 @@ body._lock {
     .header__menu._active {
         position: absolute;
         display: flex;
-        align-items: center;
         justify-content: center;
         top: 90px;
         right: 0;
         width: 320px;
         height: 100vh;
-        transform: translate(100%, 0);
-        transform: all 0.3s ease 0s;
         overflow: auto;
         background: #292929;
         transform: translate(0, 0);
+        z-index: 5;
     }
 
     .menu__list {
         flex-direction: column;
         text-align: center;
-        margin-top: -260px;
+        padding-top: 163px;
     }
 
     .menu__list li:not(:last-child) {
-        margin-bottom: 43px;
+        margin-bottom: 40px;
     }
 
     .menu__link {
@@ -547,7 +560,7 @@ body._lock {
     }
 
     .footer-content_location {
-        padding-left: 20px;
+        padding-left: 19px;
         margin-bottom: 31px;
     }
 }
@@ -710,7 +723,6 @@ body._lock {
 .footer__puppy img {
     z-index: 3;
 }
-
 
 /*-----------------------------popup------------------------------------*/
 

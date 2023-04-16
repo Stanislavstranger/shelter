@@ -1,15 +1,18 @@
 /*-----------------------------header------------------------------------*/
 
-.menu__item:nth-child(1) {
-    margin-right: 36px;
-}
+@media (min-width: 767px) {
 
-.menu__item:nth-child(2) {
-    margin-right: 35px;
-}
+    .menu__item:nth-child(1) {
+        margin-right: 36px;
+    }
 
-.menu__item:nth-child(3) {
-    margin-right: 37px;
+    .menu__item:nth-child(2) {
+        margin-right: 35px;
+    }
+
+    .menu__item:nth-child(3) {
+        margin-right: 37px;
+    }
 }
 
 .menu__link {
@@ -499,6 +502,12 @@
     min-height: 113px;
 }
 
+@media (max-width: 320px) {
+    .help-card:last-child {
+        margin: 0 auto 0 0;
+    }
+}
+
 .help-card:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -579,7 +588,7 @@
     align-items: flex-start;
     max-width: 915px;
     padding-top: 89px;
-    padding-bottom: 37px;
+    padding-bottom: 36px;
 }
 
 @media (max-width: 1200px) {
@@ -632,13 +641,13 @@
 
 @media (max-width: 768px) {
     .donation__content {
-        flex: 0 0 93.75%;
+        flex: 0 0 380px;
         padding-bottom: 56px;
         padding-left: 0;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 460px) {
     .donation__content {
         flex: 0 0 80%;
         text-align: center;

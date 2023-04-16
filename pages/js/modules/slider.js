@@ -74,4 +74,5 @@ document.addEventListener('keydown', function (e) {
 
     slider()
 
-}());
+})();
+
