@@ -1,1 +1,1 @@
-Shelter is the project in which I will create a markup with two pages, make it adaptive and interactive.
+deploy: https://Stanislavstranger.github.io/shelter/pages/main/index.html
