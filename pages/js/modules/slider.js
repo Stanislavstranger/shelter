@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', function() {
+
+/* Create slider card */
+
+function createCard() {
+    setTimeout(function () {
+        let sliderArray = createUniqueArray(3);
+        for (i = 0; i < cards.length; i++) {
+            cards[i].innerHTML = `<img src="${pets[sliderArray[i]].img}" alt=${pets[sliderArray[i]].name} class="popup-link">
+        <h3>${pets[sliderArray[i]].name}</h3>
+        <button class="button border">Learn more</button>`;
+            cards[i].id = sliderArray[i];
+        }
+        ;
+    }, 300);
+}
+
 /* Read json data from the file */
 
 let pets;
@@ -8,32 +25,14 @@ fetch("../../assets/json/pets.json") //path to the file with json data
     })
     .then(data => {
         pets = data;
-        /* console.log(pets); */
+        createCard();
     });
 
 /* Slider */
 
-(function () {
     let cards = document.querySelectorAll('.card');
     let buttonSlider = document.querySelectorAll('.button-slider');
     let prevCards = [];
-
-    /* Create slider card */
-
-    function createCard() {
-        setTimeout(function () {
-            let sliderArray = createUniqueArray(3);
-            for (i = 0; i < cards.length; i++) {
-                cards[i].innerHTML = `<img src="${pets[sliderArray[i]].img}" alt=${pets[sliderArray[i]].name} class="popup-link">
-            <h3>${pets[sliderArray[i]].name}</h3>
-            <button class="button border">Learn more</button>`;
-                cards[i].id = sliderArray[i];
-            }
-            ;
-        }, 300);
-    }
-
-    createCard();
 
     /* Create unique array slider card */
 
@@ -53,7 +52,7 @@ fetch("../../assets/json/pets.json") //path to the file with json data
 
 document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-        createCard()
+        createCard();
     }
 });
 
@@ -63,16 +62,15 @@ document.addEventListener('keydown', function (e) {
         for (i = 0; i < buttonSlider.length; i++) {
             buttonSlider[i].onclick = function () {
                 if (this.id === 'slide-next') {
-                    createCard()
+                    createCard();
                 }
                 if (this.id === 'slide-previous') {
-                    createCard()
+                    createCard();
                 }
             }
         }
     }
 
-    slider()
+    slider();
 
-})();
-
+});
