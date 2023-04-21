@@ -1,3 +1,5 @@
+let pets;
+
 document.addEventListener('DOMContentLoaded', function() {
 
 /* Create slider card */
@@ -16,8 +18,6 @@ function createCard() {
 }
 
 /* Read json data from the file */
-
-let pets;
 
 fetch("../../assets/json/pets.json") //path to the file with json data
     .then(response => {
