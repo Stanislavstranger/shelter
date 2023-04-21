@@ -2,7 +2,7 @@
 
 let pets;
 
-fetch("../../../assets/json/pets.json") //path to the file with json data
+fetch("../../assets/json/pets.json") //path to the file with json data
     .then(response => {
         return response.json();
     })
